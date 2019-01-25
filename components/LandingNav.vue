@@ -1,40 +1,43 @@
 <template>
   <b-navbar 
     toggleable="md" 
-    type="light" 
-    variant="white">
-    <b-navbar-brand href="#">
-      <img 
-        class="hero-logo"
-        src="~assets/TraxitHeroLogo.png"
+    type="dark" 
+    variant="primary">
+    <div class="container">
+
+      <b-navbar-brand to="/">TRAXIT</b-navbar-brand>
+
+      <b-navbar-toggle target="feature_nav_collapse"></b-navbar-toggle>
+
+      <b-collapse 
+        id="feature_nav_collapse"
+        is-nav 
       >
-    </b-navbar-brand>
-    <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
-    <b-collapse 
-      id="nav_collapse"
-      is-nav
-      style 
-    >
-      <b-navbar-nav class="ml-auto">
-        <b-nav-item href="#mission">Our Mission</b-nav-item>
-        <b-nav-item to="/features/overview">Features</b-nav-item>
-        <b-nav-item href="#pricing">Pricing</b-nav-item>
-        <b-nav-item href="#contact">Contact</b-nav-item>
-        <b-nav-item to="/support">Support</b-nav-item>
-        <b-nav-item 
-          class="login-btn"
-          to="/login"
-        >
-          Login
-        </b-nav-item>
-      </b-navbar-nav>
-    </b-collapse>
+
+        <!-- Right aligned nav items -->
+        <b-navbar-nav class="ml-auto">
+          <b-nav-item to="/features/overview">Overview</b-nav-item>
+          <b-nav-item to="/features/workflows">Workflows</b-nav-item>
+          <b-nav-item to="/features/engagements">Engagements</b-nav-item>
+          <b-nav-item to="/features/tasks">Tasks</b-nav-item>
+          <b-nav-item to="/features/dashboard">Dashboard</b-nav-item>
+          <b-nav-item to="/features/reports">Reports</b-nav-item>
+          <b-nav-item to="/features/manage">Manage</b-nav-item>
+        </b-navbar-nav>
+
+      </b-collapse>
+    </div>
   </b-navbar>
 </template>
 
 <script>
 export default {
-    name: 'LandingNav'
+    name: 'LandingNav',
+    methods: {
+      changeDisplay() {
+        console.log(this.$refs.toggle)
+      }
+    }
 }
 </script>
 
