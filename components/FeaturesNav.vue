@@ -7,10 +7,10 @@
 
       <b-navbar-brand to="/">TRAXIT</b-navbar-brand>
 
-      <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
+      <b-navbar-toggle target="feature_nav_collapse"></b-navbar-toggle>
 
       <b-collapse 
-        id="nav_collapse"
+        id="feature_nav_collapse"
         is-nav 
       >
 
