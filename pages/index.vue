@@ -225,7 +225,11 @@
                 col="8"
               >
               </textarea>
-              <button class="contact-btn">Request Demo</button>
+              <button 
+                class="contact-btn"
+                type="submit">
+                Request Demo
+              </button>
             </form>
           </div>
           <footer>

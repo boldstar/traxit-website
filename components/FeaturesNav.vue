@@ -5,7 +5,7 @@
     variant="primary">
     <div class="container">
 
-      <b-navbar-brand href="#">TRAXIT</b-navbar-brand>
+      <b-navbar-brand to="/">TRAXIT</b-navbar-brand>
 
       <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
 
