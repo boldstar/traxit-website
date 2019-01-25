@@ -1,18 +1,26 @@
 <template>
   <div class="form-container">
     <form class="form card shadow">
-      <nuxt-link 
-        to="/"
-        class="pb-3 ml-1"
-      >
-        <i class="fas fa-arrow-left"></i>
-        Go Back Home
-      </nuxt-link>
+      <div class="d-flex justify-content-between">
+        <nuxt-link 
+          to="/"
+          class="pb-3 ml-1 go-home-link"
+        >
+          <i class="fas fa-arrow-left"></i>
+          Go Back Home
+        </nuxt-link>
+        <div class="align-self-center mr-3">
+          <img 
+            src="~assets/TraxitHeroLogo.png" 
+            class="login-logo"
+          >
+        </div>
+      </div>
       <div class="form-body">
-        <div class="card-header border-primary">
+        <div class="card-header">
           <span class="font-weight-bold">Company Domain Form</span>
         </div>
-        <div class="card-body">
+        <div class="card-body d-flex flex-column">
           <div class="input-group py-3">  
             <input 
               v-model="domain"
@@ -51,9 +59,7 @@ export default {
         }
     },
     methods: {
-        proceedToLink() {
-            window.replace('https://aewcpa.traxit.io/login')
-        }
+
     }
 }
 </script>
@@ -81,8 +87,16 @@ export default {
 
 .form-body {
     background-color: white;
-    border: 1px solid #0077ff;
+    border: 1px solid #707070;
     border-radius: 10px;
+}
+
+.login-logo {
+  display: none;
+}
+
+.card-body {
+  padding: 10px;
 }
 
 .login-form-btn {
@@ -96,6 +110,21 @@ export default {
     padding: 0;
     border: none;
     border-radius: 10px;
+  }
+
+  .form-body {
+    border: none;
+  }
+
+  .go-home-link {
+    margin-left: 10px !important;
+    padding-top: 15px;
+  }
+
+  .login-logo {
+    display: block;
+    height: 30px;
+    width: 30px;
   }
 }
 </style>
