@@ -684,8 +684,10 @@ ul {
 }
 
 .contact-form {
+  display: flex;
+  flex-direction: column;
   width: 30%;
-  margin-top: 150px;
+  margin-top: 150px !important;
   border-radius: 10px;
 }
 
