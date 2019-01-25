@@ -2,7 +2,7 @@
   <div 
     class="landing-page"
   >
-    <header>
+    <header class="sticky-top">
       <LandingNav />
     </header>
     <section 
@@ -259,7 +259,6 @@ html {
 
 header {
   position: absolute;
-  z-index: 1;
   width: 100%;
 }
 

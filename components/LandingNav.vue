@@ -1,41 +1,69 @@
 <template>
-  <b-navbar 
-    toggleable="md" 
-    type="dark" 
-    variant="primary">
-    <div class="container">
-
-      <b-navbar-brand to="/">TRAXIT</b-navbar-brand>
-
-      <b-navbar-toggle target="feature_nav_collapse"></b-navbar-toggle>
-
-      <b-collapse 
-        id="feature_nav_collapse"
-        is-nav 
+  <nav 
+    :class="{'navbar-flex': navToggled}"
+    class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="nav-collapsed">
+      <nuxt-link 
+        class="navbar-brand" 
+        to="/"
       >
-
-        <!-- Right aligned nav items -->
-        <b-navbar-nav class="ml-auto">
-          <b-nav-item to="/features/overview">Overview</b-nav-item>
-          <b-nav-item to="/features/workflows">Workflows</b-nav-item>
-          <b-nav-item to="/features/engagements">Engagements</b-nav-item>
-          <b-nav-item to="/features/tasks">Tasks</b-nav-item>
-          <b-nav-item to="/features/dashboard">Dashboard</b-nav-item>
-          <b-nav-item to="/features/reports">Reports</b-nav-item>
-          <b-nav-item to="/features/manage">Manage</b-nav-item>
-        </b-navbar-nav>
-
-      </b-collapse>
+        <img 
+          src="~assets/TraxitHeroLogo.png" 
+          class="hero-logo"
+        >
+      </nuxt-link>
+      <div class="align-self-center">
+        <button 
+          class="btn-toggle" 
+          @click="toggleNav">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
     </div>
-  </b-navbar>
+
+
+    <div 
+      :class="{'responsive': navToggled}"
+      class="nav-links ml-auto"
+    >
+      <ul class="navbar-nav ml-auto text-right">
+        <li class="nav-item">
+          <a href="#mission">Our Mission</a>
+        </li>
+        <li class="nav-item">
+          <nuxt-link to="/features/overview">Features</nuxt-link>
+        </li>
+        <li class="nav-item">
+          <a href="#pricing">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a href="#contact">Contact</a>
+        </li>
+        <li class="nav-item">
+          <nuxt-link to="/support">Support</nuxt-link>
+        </li>
+        <li 
+          :class="{'login-btn': navToggled == false}" 
+          class="nav-item"
+        >
+          <nuxt-link to="/login">Login</nuxt-link>
+        </li>
+      </ul>
+    </div>
+  </nav>
 </template>
 
 <script>
 export default {
     name: 'LandingNav',
+    data() {
+      return {
+        navToggled: false
+      }
+    },
     methods: {
-      changeDisplay() {
-        console.log(this.$refs.toggle)
+      toggleNav() {
+        this.navToggled = !this.navToggled
       }
     }
 }
@@ -44,6 +72,10 @@ export default {
 <style>
 nav {
   padding: 10px 50px !important;
+}
+
+.btn-toggle {
+  display: none;
 }
 
 li a {
@@ -74,6 +106,26 @@ li a:hover {
  
 
 @media only screen and (max-width: 1000px){
+  .navbar-flex {
+    display: flex;
+    flex-direction: column !important;
+  }
+
+  .nav-collapsed {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .btn-toggle {
+    display: block;
+    background: white;
+    border-radius: 5px;
+    padding: 0 7px;
+    border: none;
+    font-size: 1.25rem;
+  }
+
     li a {
     text-decoration: none;
     margin-left: 25px;
@@ -81,6 +133,15 @@ li a:hover {
     color: var(--gray-color);
     font-weight: 400;
     font-size: 12px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .responsive {
+    display: flex;
+    transition: 5s heigt ease-in;
   }
 }
 </style>
