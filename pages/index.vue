@@ -2,7 +2,7 @@
   <div 
     class="landing-page"
   >
-    <header class="sticky-top">
+    <header class="sticky-top shadow">
       <LandingNav />
     </header>
     <section 
@@ -292,7 +292,7 @@ header {
 }
 
 .header {
-  color: #0077ff;
+  color: var(--blue-color);
   font-size: 7rem;
   font-weight: 600;
   letter-spacing: 1.5px;
@@ -306,7 +306,7 @@ header {
 
 .hero-btn {
   cursor: pointer;
-  border: 3px solid #0077ff;
+  border: 3px solid var(--blue-color);
   border-radius: 10px;
   padding: 5px 90px;
   background: transparent;
@@ -344,6 +344,7 @@ header {
   }
 
   .hero-background {
+    position: absolute;
     width: 100vw;
     height: 100vh;
     background-image: none;
@@ -358,7 +359,7 @@ header {
   }
 
   .header {
-    color: #0077ff;
+    color: var(--blue-color);
     font-size: 5rem;
     font-weight: 600;
     letter-spacing: 1.5px;
@@ -378,7 +379,7 @@ header {
     padding: 5px 50px;
     font-size: 1.5rem;
     font-weight: 600;
-    color: var(--gray-color);
+    color: var(--pink-color);
   }
 }
 /*End of Hero Media Query*/

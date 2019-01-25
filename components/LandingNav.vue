@@ -1,7 +1,7 @@
 <template>
   <nav 
     :class="{'navbar-flex': navToggled}"
-    class="navbar navbar-expand-lg navbar-light bg-white">
+    class="landing-navbar navbar-expand-lg navbar-light bg-white">
     <div class="nav-collapsed">
       <nuxt-link 
         class="navbar-brand" 
@@ -24,7 +24,7 @@
 
     <div 
       :class="{'responsive': navToggled}"
-      class="nav-links ml-auto"
+      class="nav-links align-self-center"
     >
       <ul class="navbar-nav ml-auto text-right">
         <li class="nav-item">
@@ -70,8 +70,10 @@ export default {
 </script>
 
 <style>
-nav {
-  padding: 10px 50px !important;
+.landing-navbar {
+  padding: 10px 25px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .btn-toggle {
@@ -103,9 +105,16 @@ li a:hover {
   background-color: var(--blue-color);
   color: white !important;
 }
+
+.nav-links {
+  margin-left: auto!important;
+}
  
 
 @media only screen and (max-width: 1000px){
+  .landing-navbar {
+    padding: 0 !important;
+  }
   .navbar-flex {
     display: flex;
     flex-direction: column !important;
@@ -115,6 +124,7 @@ li a:hover {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    padding: 15px;
   }
 
   .btn-toggle {
@@ -132,15 +142,24 @@ li a:hover {
     letter-spacing: 1px;
     color: var(--gray-color);
     font-weight: 400;
-    font-size: 12px;
+    font-size: 16px !important;
   }
 
   .nav-links {
     display: none;
+    margin-left: 0!important;
+  }
+
+  .navbar-nav {
+    padding: 10px;
+    display: flex!important;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap!important;
   }
 
   .responsive {
-    display: flex;
+    display: block;
     transition: 5s heigt ease-in;
   }
 }
