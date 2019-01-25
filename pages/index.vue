@@ -472,12 +472,14 @@ header {
 
 .features-body {
   display: flex;
-  margin-top: 100px;
+  margin-top: 30px;
 }
 
 .features-content .card-body {
   border-radius: 10px;
   background-color: white;
+  display: flex;
+  flex-direction: column;
 }
 
 .features-content .card-body:nth-child(odd) {
@@ -522,10 +524,13 @@ header {
 
   .card-body {
     background-color: white;
+    display: flex;
+    flex-direction: column;
   }
 
   .card-body h3 {
     font-size: 1.5rem;
+    margin-bottom: 5px;
   }
 
   .features-content .card-body:nth-child(odd) {
@@ -728,6 +733,8 @@ footer {
     width: 100%;
     margin-top: 50px;
     border-radius: 0;
+    display: flex;
+    flex-direction: column;
   }
 
   footer {
