@@ -2,33 +2,42 @@
   <div 
     class="landing-page"
   >
-    <header 
-      class="nav-header"
-    >
-      <div>
+    <b-navbar 
+      toggleable="md" 
+      type="light" 
+      variant="white">
+
+      <b-navbar-brand href="#">
         <img 
-          src="~assets/TraxitHeroLogo.png" 
           class="hero-logo"
+          src="~assets/TraxitHeroLogo.png"
         >
-      </div>
-      <div
-        class="nav-links"
+      </b-navbar-brand>
+
+      <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
+
+      <b-collapse 
+        id="nav_collapse"
+        is-nav 
       >
-        <li><a href="#mission">Our Mission</a></li>
-        <li><nuxt-link to="/features/overview">Features</nuxt-link></li>
-        <li><a href="#pricing">Pricing</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><nuxt-link to="/support">Support</nuxt-link></li>
-        <li>
-          <nuxt-link 
-            to="/login" 
+
+        <!-- Right aligned nav items -->
+        <b-navbar-nav class="ml-auto">
+          <b-nav-item href="#mission">Our Mission</b-nav-item>
+          <b-nav-item to="/features/overview">Features</b-nav-item>
+          <b-nav-item href="#pricing">Pricing</b-nav-item>
+          <b-nav-item href="#contact">Contact</b-nav-item>
+          <b-nav-item to="/support">Support</b-nav-item>
+          <b-nav-item 
             class="login-btn"
+            to="/login"
           >
             Login
-          </nuxt-link>
-        </li>
-      </div>
-    </header>
+          </b-nav-item>
+        </b-navbar-nav>
+
+      </b-collapse>
+    </b-navbar>
     <section 
       id="hero"
       class="hero" 
@@ -183,31 +192,36 @@
               src="~/assets/TraxitHeroLogo.png"
               class="form-logo"
             >
-            <form action="">
+            <form data-netlify="true">
               <input 
                 type="text" 
                 class="form-control" 
                 placeholder="Business Name"
+                name="Business Name"
               >
               <input 
                 type="text" 
                 class="form-control" 
                 placeholder="Name"
+                name="Individuals Name"
               >
               <input 
                 type="text" 
                 class="form-control" 
                 placeholder="Email"
+                name="Email"
               >
               <input 
                 type="text" 
                 class="form-control" 
                 placeholder="Phone"
+                name="Phone Number"
               >
               <textarea 
                 type="text" 
                 class="form-control mb-3" 
-                placeholder="Description"
+                placeholder="Message"
+                name="Message"
                 col="8"
               >
               </textarea>
@@ -270,24 +284,13 @@ html {
   margin: 0;
 }
 
-.nav-header {
-  z-index: 1;
-  position: absolute;
-  width: 100vw;
-  display: flex;
-  justify-content: space-between;
-  padding: 25px 75px;
-}
-
-.nav-links {
-  display: flex;
-  list-style: none;
-  font-size: 1.2rem;
+nav {
+  padding: 10px 50px !important;
 }
 
 li a {
   text-decoration: none;
-  margin-left: 50px;
+  margin-left: 25px;
   letter-spacing: 2px;
   color: var(--gray-color);
   font-weight: 600;
@@ -298,17 +301,17 @@ li a:hover {
   text-decoration: none;
 }
 
-.login-btn {
-  color: var(--pink-color);
-  border: 3px solid var(--blue-color);
-  border-radius: 10px;
-  padding: 8px 25px;
-  font-weight: 600;
+.login-btn a {
+  color: var(--pink-color) !important;
+  border: 3px solid var(--blue-color)!important;
+  border-radius: 10px !important;
+  padding: 8px 25px !important;
+  font-weight: 600 !important;
 }
 
-.login-btn:hover {
+.login-btn a:hover {
   background-color: var(--blue-color);
-  color: white;
+  color: white !important;
 }
 
 .hero-logo {
@@ -369,48 +372,14 @@ li a:hover {
 
 /* Hero Media Query */
     
-@media only screen and (max-width: 600px){
-  .nav-header {
-    z-index: 1;
-    position: absolute;
-    width: 100%;
-    padding: 25px 15px;
-  }
-
-  .collapsed-nav {
-    background: black;
-  }
-
-  .nav-links {
-    display: none;
-    list-style: none;
-    font-size: 1.2rem;
-  }
-
-  li a {
+@media only screen and (max-width: 1000px){
+    li a {
     text-decoration: none;
-    margin-left: 50px;
-    letter-spacing: 2px;
+    margin-left: 25px;
+    letter-spacing: 1px;
     color: var(--gray-color);
-    font-weight: 600;
-  }
-
-  li a:hover {
-    color: var(--blue-color);
-    text-decoration: none;
-  }
-
-  .login-btn {
-    color: var(--pink-color);
-    border: 3px solid var(--blue-color);
-    border-radius: 10px;
-    padding: 8px 25px;
-    font-weight: 600;
-  }
-
-  .login-btn:hover {
-    background-color: var(--blue-color);
-    color: white;
+    font-weight: 400;
+    font-size: 12px;
   }
 
   .hero-logo {
@@ -462,11 +431,6 @@ li a:hover {
     color: var(--gray-color);
   }
 }
-
-@media only screen and (max-width: 850px) and (orientation : landscape){
-    
-
-}
 /*End of Hero Media Query*/
 
 .mission {
@@ -505,7 +469,7 @@ li a:hover {
 }
 
 /* Mission media query*/
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 1000px){
   .mission-content {
     width: 80%;
     text-align: center;
@@ -522,16 +486,11 @@ li a:hover {
   }
 
 }
-
-@media only screen and (max-width: 850px) and (orientation : landscape){
-    
-
-}
 /*end of mission mediq query*/
 
 .features {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -540,7 +499,7 @@ li a:hover {
 
 .features-background {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   background-image: url('~assets/TraxitFeaturesBackground.png');
   background-size: cover;
   background-repeat: no-repeat;
@@ -567,6 +526,7 @@ li a:hover {
 
 .features-content .card-body {
   border-radius: 10px;
+  background-color: white;
 }
 
 .features-content .card-body:nth-child(odd) {
@@ -588,13 +548,7 @@ li a:hover {
 
 /* Hero Media Query */
     
-@media only screen and (max-width: 600px){
-  .features {
-    overflow: hidden;
-    display: block;
-    height: 230vh;
-  }
-
+@media only screen and (max-width: 1000px){
   .features-header {
     margin-top: 15px;
     margin-bottom: 0;
@@ -620,7 +574,7 @@ li a:hover {
   }
 
   .card-body h3 {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 
   .features-content .card-body:nth-child(odd) {
@@ -630,21 +584,11 @@ li a:hover {
     margin: 0;
   }
 
-  
-  .features-content a {
-    display: none;
-  }
 }
-
-@media only screen and (max-width: 850px) and (orientation : landscape){
-    
-
-}
+/* End of features media query */
 
 .pricing {
   position: relative;
-  padding-bottom: 200px; 
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -695,15 +639,14 @@ ul {
 }
 
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 1000px){
   .pricing {
   position: relative; 
-  height: 175vh;
-  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: var(--blue-color);
+  padding: 15px;
 }
 
   .pricing-header {
@@ -754,12 +697,7 @@ ul {
   }
 
 }
-
-@media only screen and (max-width: 850px) and (orientation : landscape){
-    
-
-}
-
+/* end of pricing media query */
 
 .contact {
   position: relative;
@@ -829,7 +767,7 @@ footer {
   font-weight: 600;
 }
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 1000px){
   .contact-header {
     margin: 35px 0;
     font-size: 1.5rem;
@@ -846,11 +784,6 @@ footer {
     font-size: .75rem;
     font-weight: 400;
   }
-}
-
-@media only screen and (max-width: 850px) and (orientation : landscape){
-    
-
 }
 
 

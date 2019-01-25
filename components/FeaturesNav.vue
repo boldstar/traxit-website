@@ -1,95 +1,33 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <b-navbar 
+    toggleable="md" 
+    type="dark" 
+    variant="primary">
     <div class="container">
-      <nuxt-link 
-        class="navbar-brand font-weight-bold" 
-        to="/"
+
+      <b-navbar-brand href="#">TRAXIT</b-navbar-brand>
+
+      <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
+
+      <b-collapse 
+        id="nav_collapse"
+        is-nav 
       >
-        TRAXIT
-      </nuxt-link>
-      <button 
-        class="navbar-toggler" 
-        type="button" 
-        data-toggle="collapse" 
-        data-target="#navbarSupportedContent" 
-        aria-controls="navbarSupportedContent" 
-        aria-expanded="false" 
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div 
-        id="navbarSupportedContent"
-        class="collapse navbar-collapse" 
-      >
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <nuxt-link
-              :class="{ 'active-link': $route.name == 'features-overview'}" 
-              class="nav-link" 
-              to="/features/overview"
-            >
-              Overview
-            </nuxt-link>
-          </li>
-          <li class="nav-item">
-            <nuxt-link
-              :class="{ 'active-link': $route.name == 'features-workflows'}"
-              class="nav-link"  
-              to="/features/workflows"
-            >
-              Workflows
-            </nuxt-link>
-          </li>
-          <li class="nav-item">
-            <nuxt-link
-              :class="{ 'active-link': $route.name == 'features-engagements'}"
-              class="nav-link"  
-              to="/features/engagements"
-            >
-              Engagements
-            </nuxt-link>
-          </li>
-          <li class="nav-item">
-            <nuxt-link
-              :class="{ 'active-link': $route.name == 'features-tasks'}" 
-              class="nav-link" 
-              to="/features/tasks"
-            >
-              Tasks
-            </nuxt-link>
-          </li>
-          <li class="nav-item">
-            <nuxt-link
-              :class="{ 'active-link': $route.name == 'features-dashboard'}"
-              class="nav-link"  
-              to="/features/dashboard"
-            >
-              Dashboard
-            </nuxt-link>
-          </li>
-          <li class="nav-item">
-            <nuxt-link
-              :class="{ 'active-link': $route.name == 'features-reports'}"
-              class="nav-link"  
-              to="/features/reports"
-            >
-              Reports
-            </nuxt-link>
-          </li>
-          <li class="nav-item">
-            <nuxt-link
-              :class="{ 'active-link': $route.name == 'features-manage'}"
-              class="nav-link"  
-              to="/features/manage"
-            >  
-              Manage
-            </nuxt-link>
-          </li>
-        </ul>
-      </div>
+
+        <!-- Right aligned nav items -->
+        <b-navbar-nav class="ml-auto">
+          <b-nav-item to="/features/overview">Overview</b-nav-item>
+          <b-nav-item to="/features/workflows">Workflows</b-nav-item>
+          <b-nav-item to="/features/engagements">Engagements</b-nav-item>
+          <b-nav-item to="/features/tasks">Tasks</b-nav-item>
+          <b-nav-item to="/features/dashboard">Dashboard</b-nav-item>
+          <b-nav-item to="/features/reports">Reports</b-nav-item>
+          <b-nav-item to="/features/manage">Manage</b-nav-item>
+        </b-navbar-nav>
+
+      </b-collapse>
     </div>
-  </nav>
+  </b-navbar>
 </template>
 
 <script>
@@ -99,20 +37,12 @@ export default {
 </script>
 
 <style>
-  .nav-item {
-    margin-left: 20px;
-  }
 
-  .nav-link {
-    font-weight: 500;
-  }
-
-  .active-link {
-    color: white !important;
-    font-size: 1.25rem;
-    padding: 0;
-    margin-top: 3px;
-  }
+.nav-link {
+  margin-left: 5px !important;
+  font-size: 12px !important;
+}
+ 
 </style>
 
 

@@ -72,7 +72,7 @@ export default {
 }
 
 .form { 
-    width: 30%;
+    width: 40%;
     align-self: center;
     padding: 30px;
     border: none;
@@ -87,6 +87,16 @@ export default {
 
 .login-form-btn {
     border: 1px solid black;
+}
+
+@media screen and (max-width: 1000px){
+  .form { 
+    width: 95%;
+    align-self: center;
+    padding: 0;
+    border: none;
+    border-radius: 10px;
+  }
 }
 </style>
 
