@@ -8,7 +8,9 @@
     </div>
     <div class="p-3 d-flex flex-column bg-light mt-2">
       <div class="card-body bg-white shadow-sm">
-        <h3>Workflows</h3>
+        <div>
+          <h3>Workflows</h3>
+        </div>
         <nuxt-link 
           to="/features/workflows"
           class="btn btn-outline-primary btn-sm"
@@ -53,7 +55,7 @@
         </nuxt-link>
       </div>
       <div class="card-body bg-white shadow-sm">
-        <h3>Management</h3>
+        <h3>Manage</h3>
         <nuxt-link 
           to="/features/manage"
           class="btn btn-outline-primary btn-sm"
@@ -90,6 +92,13 @@ background-color: #70707011 !important;
 
 .card-body:nth-child(even) {
   margin: 15px 0;
+}
+
+@media screen and (max-width: 1000px) {
+  .card-body {
+    display: flex !important;
+    justify-content: space-between !important;
+  }
 }
 
 </style>

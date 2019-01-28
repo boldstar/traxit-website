@@ -43,32 +43,62 @@
           <h2 class="features-header">Features</h2>
           <div class="features-body">
             <div class="card-body shadow">
-              <h3>Dashboard<i class="fas fa-tachometer-alt ml-3 text-primary"></i></h3>
+              <div class="feature-card-header">
+                <h3 class="align-self-center">Dashboard</h3>
+                <div>
+                  <i class="fas fa-tachometer-alt ml-3 text-primary"></i>
+                </div>
+              </div>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia iste tempore voluptatibus ut cum dicta ad minus, sapiente totam inventore eaque facilis itaque, explicabo ipsa voluptates facere quo natus! Est.</p>
               <nuxt-link to="/features/dashboard">Learn More</nuxt-link>
             </div>
             <div class="card-body shadow">
-              <h3>Workflows<i class="fas fa-route ml-3 text-primary"></i></h3>
+              <div class="feature-card-header">
+                <h3>Workflows</h3>
+                <div>
+                  <i class="fas fa-route ml-3 text-primary"></i>
+                </div>
+              </div>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia iste tempore voluptatibus ut cum dicta ad minus, sapiente totam inventore eaque facilis itaque, explicabo ipsa voluptates facere quo natus! Est.</p>
               <nuxt-link to="/features/workflows">Learn More</nuxt-link>
             </div>
             <div class="card-body shadow">
-              <h3>Reports<i class="fas fa-database ml-3 text-primary"></i></h3>
+              <div class="feature-card-header">
+                <h3>Reports</h3>
+                <div>
+                  <i class="fas fa-database ml-3 text-primary"></i>
+                </div>
+              </div>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia iste tempore voluptatibus ut cum dicta ad minus, sapiente totam inventore eaque facilis itaque, explicabo ipsa voluptates facere quo natus! Est.</p>
               <nuxt-link to="/features/reports">Learn More</nuxt-link>
             </div>
             <div class="card-body shadow">
-              <h3>Manage<i class="fas fa-clipboard ml-3 text-primary"></i></h3>
+              <div class="feature-card-header">
+                <h3>Manage</h3>
+                <div>
+                  <i class="fas fa-clipboard ml-3 text-primary"></i>
+                </div>
+              </div>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia iste tempore voluptatibus ut cum dicta ad minus, sapiente totam inventore eaque facilis itaque, explicabo ipsa voluptates facere quo natus! Est.</p>
               <nuxt-link to="/features/manage">Learn More</nuxt-link>
             </div>
             <div class="card-body shadow">
-              <h3>Tasks<i class="fas fa-tasks ml-3 text-primary"></i></h3>
+              <div class="feature-card-header">
+                <h3>Tasks</h3>
+                <div>
+                  <i class="fas fa-tasks ml-3 text-primary"></i>
+                </div>
+              </div>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia iste tempore voluptatibus ut cum dicta ad minus, sapiente totam inventore eaque facilis itaque, explicabo ipsa voluptates facere quo natus! Est.</p>
               <nuxt-link to="/features/tasks">Learn More</nuxt-link>
             </div>
             <div class="card-body shadow">
-              <h3>Engagements<i class="far fa-folder-open ml-1 text-primary"></i></h3>
+              <div class="feature-card-header">
+                <h3>Engagements</h3>
+                <div>
+                  <i class="far fa-folder-open ml-1 text-primary"></i>
+                </div>
+              </div>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia iste tempore voluptatibus ut cum dicta ad minus, sapiente totam inventore eaque facilis itaque, explicabo ipsa voluptates facere quo natus! Est.</p>
               <nuxt-link to="/features/engagements">Learn More</nuxt-link>
             </div>
@@ -394,8 +424,8 @@ header {
 }
 
 .mission-background {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: auto;
   background-image: url('~assets/RocketLaunchingMissionBackground.png');
   background-size: cover;
   background-repeat: no-repeat;
@@ -489,6 +519,13 @@ header {
   margin-top: 75px;
   margin-left: 25px;
   margin-right: 25px;
+}
+
+.feature-card-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 1.25rem;
 }
 
 .features-content a {
