@@ -222,6 +222,7 @@
                 col="8"
               >
               </textarea>
+              <div data-netlify-recaptcha="true"></div>
               <button 
                 class="contact-btn"
                 type="submit">
