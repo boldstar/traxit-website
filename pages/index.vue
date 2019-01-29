@@ -189,7 +189,15 @@
               src="~/assets/TraxitHeroLogo.png"
               class="form-logo"
             >
-            <form data-netlify="true">
+            <form 
+              data-netlify="true" 
+              netlify-honeypot="bot-field">
+              <p class="hidden">
+                <label>
+                  Don’t fill this out if you're human: 
+                  <input name="bot-field" />
+                </label>
+              </p>
               <input 
                 type="text" 
                 class="form-control" 
@@ -291,6 +299,10 @@ html {
 header {
   position: absolute;
   width: 100%;
+}
+
+.hidden {
+  display: none;
 }
 
 .hero-logo {
