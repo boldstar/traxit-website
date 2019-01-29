@@ -99,13 +99,6 @@ background-color: #70707011 !important;
   margin: 15px 0;
 }
 
-@media screen and (max-width: 1000px) {
-  .card-body {
-    display: flex !important;
-    justify-content: space-between !important;
-  }
-}
-
 </style>
 
 
