@@ -49,7 +49,7 @@
                   <i class="fas fa-tachometer-alt ml-3 text-primary"></i>
                 </div>
               </div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia iste tempore voluptatibus ut cum dicta ad minus, sapiente totam inventore eaque facilis itaque, explicabo ipsa voluptates facere quo natus! Est.</p>
+              <p>Giving a visual representation of the data you have flowing through your firm or business is great for quick decision making and an over view of what is happening</p>
               <nuxt-link to="/features/dashboard">Learn More</nuxt-link>
             </div>
             <div class="card-body shadow">
@@ -59,7 +59,7 @@
                   <i class="fas fa-route ml-3 text-primary"></i>
                 </div>
               </div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia iste tempore voluptatibus ut cum dicta ad minus, sapiente totam inventore eaque facilis itaque, explicabo ipsa voluptates facere quo natus! Est.</p>
+              <p>The backbone of this tool is workflows. They are meant to process and track the status of engagements. Essentially they can be used for anything that requires steps to complete but for a CPA firm this might be tax returns, or bookkeeping</p>
               <nuxt-link to="/features/workflows">Learn More</nuxt-link>
             </div>
             <div class="card-body shadow">
@@ -69,7 +69,7 @@
                   <i class="fas fa-database ml-3 text-primary"></i>
                 </div>
               </div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia iste tempore voluptatibus ut cum dicta ad minus, sapiente totam inventore eaque facilis itaque, explicabo ipsa voluptates facere quo natus! Est.</p>
+              <p>The ability to run reports is another great tool for making decisions. One example would be to know the amount of a certain tax returns were processed in the year 2018</p>
               <nuxt-link to="/features/reports">Learn More</nuxt-link>
             </div>
             <div class="card-body shadow">
@@ -79,7 +79,7 @@
                   <i class="fas fa-clipboard ml-3 text-primary"></i>
                 </div>
               </div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia iste tempore voluptatibus ut cum dicta ad minus, sapiente totam inventore eaque facilis itaque, explicabo ipsa voluptates facere quo natus! Est.</p>
+              <p>We wanted this took to be flexible so you have the ability to manage your own workflows, team members, and reports all from the admin dashboard. Only abled to be view by admins, this will be only accessed to those you choose to allow.</p>
               <nuxt-link to="/features/manage">Learn More</nuxt-link>
             </div>
             <div class="card-body shadow">
@@ -89,7 +89,7 @@
                   <i class="fas fa-tasks ml-3 text-primary"></i>
                 </div>
               </div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia iste tempore voluptatibus ut cum dicta ad minus, sapiente totam inventore eaque facilis itaque, explicabo ipsa voluptates facere quo natus! Est.</p>
+              <p>This is great to keep everyone informed on what is needed to be done. And more specifically what each team member has assigned. Each team member will have there own tasks. Each task is related to the processing of an engagement.</p>
               <nuxt-link to="/features/tasks">Learn More</nuxt-link>
             </div>
             <div class="card-body shadow">
@@ -99,7 +99,7 @@
                   <i class="far fa-folder-open ml-1 text-primary"></i>
                 </div>
               </div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia iste tempore voluptatibus ut cum dicta ad minus, sapiente totam inventore eaque facilis itaque, explicabo ipsa voluptates facere quo natus! Est.</p>
+              <p>Engagements are what is being processed. For instance if you do a 1040 tax return, that would be considered an engagement. Consider it to be the connection between you and your clients. Each engagement will also contains specific details and questions that can be viewed at anytime.</p>
               <nuxt-link to="/features/engagements">Learn More</nuxt-link>
             </div>
           </div>
