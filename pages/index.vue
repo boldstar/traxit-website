@@ -191,7 +191,8 @@
             >
             <form 
               data-netlify="true" 
-              netlify-honeypot="bot-field">
+              netlify-honeypot="bot-field"
+              data-netlify-recaptcha="true">
               <p class="hidden">
                 <label>
                   Don’t fill this out if you're human: 
@@ -230,7 +231,11 @@
                 col="8"
               >
               </textarea>
-              <div data-netlify-recaptcha="true"></div>
+              <div 
+                class="g-recaptcha mb-2" 
+                data-sitekey="6Le-pI0UAAAAAK-8AgPo6deKEZSmlR-n0PALWIfM"
+              >
+              </div>
               <button 
                 class="contact-btn"
                 type="submit">
