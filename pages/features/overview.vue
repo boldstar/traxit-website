@@ -1,6 +1,6 @@
 <template>
-  <div class="overview">
-    <div class="card-body shadow-sm p-4 text-center text-primary h2 d-flex justify-content-between">
+  <div class="overview bg-light">
+    <div class="card-header shadow-sm p-4 text-primary h2 d-flex justify-content-between bg-white">
       <span>Overview</span>
       <div>
         <i class="fas fa-table"></i>
@@ -8,7 +8,7 @@
     </div>
     <div class="overview-body">
       <div class="card-body features-card-body bg-white shadow-sm d-flex flex-column  justify-content-between">
-        <div class="d-flex justify-content-between h3">
+        <div class="d-flex justify-content-between h3 mb-3">
           <span class="align-self-center">Workflows</span>
           <i class="fas fa-route mr-3 text-primary align-self-center"></i>
         </div>
@@ -20,7 +20,7 @@
         </nuxt-link>
       </div>
       <div class="card-body features-card-body bg-white shadow-sm d-flex flex-column justify-content-between">
-        <div class="d-flex justify-content-between h3">
+        <div class="d-flex justify-content-between h3 mb-3">
           <span class="align-self-center">Engagements</span>
           <i class="far fa-folder-open mr-3 text-primary align-self-center"></i>
         </div>
@@ -32,7 +32,7 @@
         </nuxt-link>
       </div>
       <div class="card-body features-card-body bg-white shadow-sm d-flex flex-column justify-content-between">
-        <div class="d-flex justify-content-between h3">
+        <div class="d-flex justify-content-between h3 mb-3">
           <span class="align-self-center">Tasks</span>
           <i class="fas fa-tasks mr-3 text-primary align-self-center"></i>
         </div>
@@ -44,7 +44,7 @@
         </nuxt-link>
       </div>
       <div class="card-body features-card-body bg-white shadow-sm d-flex flex-column justify-content-between">
-        <div class="d-flex justify-content-between h3">
+        <div class="d-flex justify-content-between h3 mb-3">
           <span class="align-self-center">Dashboard</span>
           <i class="fas fa-tachometer-alt mr-3 text-primary align-self-center"></i>
         </div>
@@ -56,7 +56,7 @@
         </nuxt-link>
       </div>
       <div class="card-body features-card-body bg-white shadow-sm d-flex flex-column justify-content-between">
-        <div class="d-flex justify-content-between h3">
+        <div class="d-flex justify-content-between h3 mb-3">
           <span class="align-self-center">Reports</span>
           <i class="fas fa-database mr-3 text-primary align-self-center"></i>
         </div>
@@ -68,7 +68,7 @@
         </nuxt-link>
       </div>
       <div class="card-body features-card-body bg-white shadow-sm d-flex flex-column justify-content-between">
-        <div class="d-flex justify-content-between h3">
+        <div class="d-flex justify-content-between h3 mb-3">
           <span class="align-self-center">Manage</span>
           <i class="fas fa-clipboard mr-3 text-primary align-self-center"></i>
         </div>
@@ -90,12 +90,18 @@ export default {
 </script>
 
 <style>
+.overview {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 
 .overview-body {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   width: 100%;
+  margin: 5vh 0;
 }
 
 .features-card-body {
@@ -114,7 +120,7 @@ h3 {
   margin: 0;
 }
 
-.card-body:hover {
+.features-card-body:hover {
   cursor: pointer;
   background-color: #70707011 !important;
 }
