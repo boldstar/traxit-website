@@ -121,9 +121,9 @@
               <li class="d-flex justify-content-between"><span>Workflows</span><i class="fas fa-check align-self-center"></i></li>
               <li class="d-flex justify-content-between"><span>Reports</span><i class="fas fa-check align-self-center"></i></li>
               <li class="d-flex justify-content-between"><span>Tasks</span><i class="fas fa-check align-self-center"></i></li>
-              <li class="d-flex justify-content-between"><span>Team Members</span><i class="fas fa-check align-self-center"></i></li>
-              <li class="d-flex justify-content-between"><span>Engagements</span><i class="fas fa-check align-self-center"></i></li>
-              <li class="d-flex justify-content-between"><span>Support</span><i class="fas fa-check align-self-center"></i></li>   
+              <li class="d-flex justify-content-between"><span>Team Members</span><span class="pricing-detail">2</span></li>
+              <li class="d-flex justify-content-between"><span>Engagements</span><span class="pricing-detail">100</span></li>
+              <li class="d-flex justify-content-between"><span>Support</span><span class="pricing-detail">Email</span></li>   
             </ul>
           </div>
           <div class="card-footer bg-white">
@@ -142,9 +142,9 @@
               <li class="d-flex justify-content-between"><span>Workflows</span><i class="fas fa-check align-self-center"></i></li>
               <li class="d-flex justify-content-between"><span>Reports</span><i class="fas fa-check align-self-center"></i></li>
               <li class="d-flex justify-content-between"><span>Tasks</span><i class="fas fa-check align-self-center"></i></li>
-              <li class="d-flex justify-content-between"><span>Team Members</span><i class="fas fa-check align-self-center"></i></li>
-              <li class="d-flex justify-content-between"><span>Engagements</span><i class="fas fa-check align-self-center"></i></li>
-              <li class="d-flex justify-content-between"><span>Support</span><i class="fas fa-check align-self-center"></i></li> 
+              <li class="d-flex justify-content-between"><span>Team Members</span><span class="pricing-detail">7</span></li>
+              <li class="d-flex justify-content-between"><span>Engagements</span><span class="pricing-detail">500</span></li>
+              <li class="d-flex justify-content-between"><span>Support</span><span class="pricing-detail">Email/Phone</span></li> 
             </ul>
           </div>
           <div class="card-footer bg-white">
@@ -163,9 +163,9 @@
               <li class="d-flex justify-content-between"><span>Workflows</span><i class="fas fa-check align-self-center"></i></li>
               <li class="d-flex justify-content-between"><span>Reports</span><i class="fas fa-check align-self-center"></i></li>
               <li class="d-flex justify-content-between"><span>Tasks</span><i class="fas fa-check align-self-center"></i></li>
-              <li class="d-flex justify-content-between"><span>Team Members</span><i class="fas fa-check align-self-center"></i></li>
-              <li class="d-flex justify-content-between"><span>Engagements</span><i class="fas fa-check align-self-center"></i></li>
-              <li class="d-flex justify-content-between"><span>Support</span><i class="fas fa-check align-self-center"></i></li> 
+              <li class="d-flex justify-content-between"><span>Team Members</span><span class="pricing-detail">Unlimited</span></li>
+              <li class="d-flex justify-content-between"><span>Engagements</span><span class="pricing-detail">Unlimited</span></li>
+              <li class="d-flex justify-content-between"><span>Support</span><span class="pricing-detail">Email/Phone</span></li> 
             </ul>
           </div>
           <div class="card-footer bg-white">
@@ -476,7 +476,7 @@ header {
   }
 
   .mission-header {
-    margin: 50px 0;
+    margin: 30px 0;
     font-size: 2rem;
   }
 
@@ -490,6 +490,7 @@ header {
 .features {
   position: relative;
   min-height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -519,7 +520,9 @@ header {
 }
 
 .features-body {
+  max-width: 1100px;
   display: flex;
+  flex-wrap: wrap;
   margin-top: 30px;
 }
 
@@ -528,6 +531,10 @@ header {
   background-color: white;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  width: 16em;
+  height: auto;
+  margin: 10px;
 }
 
 .features-content .card-body:nth-child(odd) {
@@ -572,15 +579,7 @@ header {
   }
 
   .features-body {
-    display: flex;
-    flex-direction: column;
     margin-top: 0;
-  }
-
-  .card-body {
-    background-color: white;
-    display: flex;
-    flex-direction: column;
   }
 
   .card-body h3 {
@@ -589,10 +588,10 @@ header {
   }
 
   .features-content .card-body:nth-child(odd) {
-    margin: 20px 0;
+    margin: 10px;
   }
   .features-content .card-body:nth-child(even) {
-    margin: 0;
+    margin: 10px;
   }
 
 }
@@ -620,7 +619,11 @@ header {
 }
 
 .pricing .card {
-  width: 20%;
+  width: 20rem;
+}
+
+.pricing .card-body {
+  padding: 0 15px;
 }
 
 .pricing .card:nth-child(even) {
@@ -641,6 +644,12 @@ ul {
 .pricing ul li {
   font-size: 1.2rem;
   margin: 25px 0;
+}
+
+.pricing-detail {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--blue-color);
 }
 
 .pricing .card-footer {
@@ -695,6 +704,10 @@ ul {
   .pricing ul li {
     font-size: .75rem;
     margin: 10px 0;
+  }
+
+  .pricing-detail {
+    font-size: 1rem;
   }
 
   .pricing .card-footer {

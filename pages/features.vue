@@ -1,7 +1,7 @@
 <template>
   <div>
     <FeaturesNav />
-    <div class="container">
+    <div class="container p-0">
       <nuxt-child />
     </div>
   </div>

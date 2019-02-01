@@ -1,15 +1,16 @@
 <template>
-  <div>
-    <div class="card-body shadow p-4 text-center text-primary h2 d-flex justify-content-between">
+  <div class="overview">
+    <div class="card-body shadow-sm p-4 text-center text-primary h2 d-flex justify-content-between">
       <span>Overview</span>
       <div>
         <i class="fas fa-table"></i>
       </div>
     </div>
-    <div class="p-3 d-flex flex-column bg-light mt-2">
-      <div class="card-body bg-white shadow-sm d-flex justify-content-between">
-        <div>
-          <h3><i class="fas fa-route mr-3 text-primary"></i>Workflows</h3>
+    <div class="overview-body">
+      <div class="card-body features-card-body bg-white shadow-sm d-flex flex-column  justify-content-between">
+        <div class="d-flex justify-content-between h3">
+          <span class="align-self-center">Workflows</span>
+          <i class="fas fa-route mr-3 text-primary align-self-center"></i>
         </div>
         <nuxt-link 
           to="/features/workflows"
@@ -18,9 +19,10 @@
           View
         </nuxt-link>
       </div>
-      <div class="card-body bg-white shadow-sm d-flex justify-content-between">
-        <div>
-          <h3><i class="far fa-folder-open mr-3 text-primary"></i>Engagements</h3>
+      <div class="card-body features-card-body bg-white shadow-sm d-flex flex-column justify-content-between">
+        <div class="d-flex justify-content-between h3">
+          <span class="align-self-center">Engagements</span>
+          <i class="far fa-folder-open mr-3 text-primary align-self-center"></i>
         </div>
         <nuxt-link 
           to="/features/engagements"
@@ -29,9 +31,10 @@
           View
         </nuxt-link>
       </div>
-      <div class="card-body bg-white shadow-sm d-flex justify-content-between">
-        <div>
-          <h3><i class="fas fa-tasks mr-3 text-primary"></i>Tasks</h3>
+      <div class="card-body features-card-body bg-white shadow-sm d-flex flex-column justify-content-between">
+        <div class="d-flex justify-content-between h3">
+          <span class="align-self-center">Tasks</span>
+          <i class="fas fa-tasks mr-3 text-primary align-self-center"></i>
         </div>
         <nuxt-link 
           to="/features/tasks"
@@ -40,9 +43,10 @@
           View
         </nuxt-link>
       </div>
-      <div class="card-body bg-white shadow-sm d-flex justify-content-between">
-        <div>
-          <h3><i class="fas fa-tachometer-alt mr-3 text-primary"></i>Dashboard</h3>
+      <div class="card-body features-card-body bg-white shadow-sm d-flex flex-column justify-content-between">
+        <div class="d-flex justify-content-between h3">
+          <span class="align-self-center">Dashboard</span>
+          <i class="fas fa-tachometer-alt mr-3 text-primary align-self-center"></i>
         </div>
         <nuxt-link 
           to="/features/dashboard"
@@ -51,9 +55,10 @@
           View
         </nuxt-link>
       </div>
-      <div class="card-body bg-white shadow-sm d-flex justify-content-between">
-        <div>
-          <h3><i class="fas fa-database mr-3 text-primary"></i>Reports</h3>
+      <div class="card-body features-card-body bg-white shadow-sm d-flex flex-column justify-content-between">
+        <div class="d-flex justify-content-between h3">
+          <span class="align-self-center">Reports</span>
+          <i class="fas fa-database mr-3 text-primary align-self-center"></i>
         </div>
         <nuxt-link 
           to="/features/reports"
@@ -62,9 +67,10 @@
           View
         </nuxt-link>
       </div>
-      <div class="card-body bg-white shadow-sm d-flex justify-content-between">
-        <div>
-          <h3><i class="fas fa-clipboard mr-3 text-primary"></i>Manage</h3>
+      <div class="card-body features-card-body bg-white shadow-sm d-flex flex-column justify-content-between">
+        <div class="d-flex justify-content-between h3">
+          <span class="align-self-center">Manage</span>
+          <i class="fas fa-clipboard mr-3 text-primary align-self-center"></i>
         </div>
         <nuxt-link 
           to="/features/manage"
@@ -85,19 +91,34 @@ export default {
 
 <style>
 
+.overview-body {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.features-card-body {
+  width: 20rem;
+  margin: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .features-card-body {
+    margin-bottom: 20px !important;
+  }
+}
+
 h3 {
   color: #707070 !important;
   margin: 0;
 }
 
 .card-body:hover {
-cursor: pointer;
-background-color: #70707011 !important;
+  cursor: pointer;
+  background-color: #70707011 !important;
 }
 
-.card-body:nth-child(even) {
-  margin: 15px 0;
-}
 
 </style>
 
