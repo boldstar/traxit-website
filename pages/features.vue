@@ -1,6 +1,6 @@
 <template>
   <div>
-    <FeaturesNav />
+    <FeaturesNav class="sticky-top" />
     <div class="container p-0">
       <nuxt-child />
     </div>

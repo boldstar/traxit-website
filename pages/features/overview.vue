@@ -6,7 +6,7 @@
         <i class="fas fa-table"></i>
       </div>
     </div>
-    <div class="overview-body">
+    <div class="overview-body my-auto">
       <div class="card-body features-card-body bg-white shadow-sm d-flex flex-column  justify-content-between">
         <div class="d-flex justify-content-between h3 mb-3">
           <span class="align-self-center">Workflows</span>
